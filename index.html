@@ -126,18 +126,6 @@ footer {
 </head>
 <video id="bgVideo" class="bg" autoplay muted playsinline>
   <source src="bg.mp4" type="video/mp4">
-</video>
-
-<script>
-const v = document.getElementById("bgVideo");
-
-v.addEventListener("timeupdate", () => {
-  if (v.currentTime >= 4) {
-    v.currentTime = 0;
-    v.play();
-  }
-});
-</script>
 <div class="overlay">
 
 <header>
