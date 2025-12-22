@@ -267,9 +267,9 @@ if ("geolocation" in navigator) {
             sholatEl.className = "adzan";
             sholatEl.innerText = `🕌 SUDAH WAKTUNYA SHOLAT ${active.toUpperCase()}`;
 
-            if (lastAdzan !== active) {
-              adzan.play().catch(()=>{});
-              lastAdzan = active;
+            if (izinAudio && lastAdzan !== active) {
+             adzan.play().catch(()=>{});
+             lastAdzan = active 
             }
             return;
           }
@@ -289,8 +289,8 @@ if ("geolocation" in navigator) {
         }
 
         updateSholat();
-        setInterval(updateSholat,60000);
-      });
+         setInterval(updateShola,,60000;
+       };
   },()=>sholatEl.innerText="Izin lokasi ditolak");
 } else {
   sholatEl.innerText="GPS tidak tersedia";
