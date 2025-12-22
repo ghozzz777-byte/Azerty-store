@@ -300,5 +300,12 @@ if ("geolocation" in navigator) {
   sholatEl.innerText="GPS tidak tersedia";
 }
 </script>
-</body>
-<audio id="adzanAudio" src="adzan.mp3" preload="auto"></audio>
+ <audio id="adzanAudio" src="adzan.mp3" preload="auto"></audio>
+audio.currentTime = 0;
+audio.play().catch(()=>{});
+ 
+setTimeout(() => {
+  audio.pause();
+  audio.currentTime = 0;
+}, 30000);
+/body>
