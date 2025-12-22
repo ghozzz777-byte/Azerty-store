@@ -106,6 +106,89 @@ footer {
   opacity: 0.8;
 }
 </style>
+<style>
+.stickman {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 120px;
+}
+
+.head {
+  width: 30px;
+  height: 30px;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.body {
+  width: 3px;
+  height: 40px;
+  background: black;
+  margin: auto;
+}
+
+.arm, .leg {
+  width: 30px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  left: 15px;
+}
+
+.arm {
+  top: 50px;
+  animation: swing 1s infinite alternate;
+}
+
+.leg {
+  top: 85px;
+  animation: walk 1s infinite alternate;
+}
+
+/* GERAK NORMAL */
+@keyframes swing {
+  from { transform: rotate(-20deg); }
+  to { transform: rotate(20deg); }
+}
+@keyframes walk {
+  from { transform: rotate(10deg); }
+  to { transform: rotate(-20deg); }
+}
+
+/* MODE BERTAPA */
+.bertapa .arm,
+.bertapa .leg {
+  animation: none;
+}
+
+.bertapa .arm.left {
+  transform: rotate(-60deg);
+}
+.bertapa .arm.right {
+  transform: rotate(60deg);
+}
+.bertapa .leg {
+  transform: rotate(0deg);
+}
+
+/* TEKS ADZAN */
+#adzanText {
+  position: fixed;
+  bottom: 160px;
+  right: 20px;
+  color: red;
+  font-weight: bold;
+  display: none;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+</style>
 </head>
 
 <body>
