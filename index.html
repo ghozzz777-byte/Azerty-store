@@ -8,6 +8,7 @@
  @font-face {
   font-family:'RomanceA';
   src: url('RomanceA.ttf')
+   
   font-weightn: normal;
   font-style: normal;
 }
@@ -131,8 +132,8 @@ footer {
 const v = document.getElementById("bgVideo");
 
 v.addEventListener("timeupdate", () => {
-  if (v.currentTime >= 5) {
-    v.currentTime = 5;
+  if (v.currentTime >= 4) {
+    v.currentTime = 0;
     v.play();
   }
 });
