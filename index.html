@@ -3,25 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azerty Store</title>
-<style>
- @font-face {
-  font-family:'RomanceA';
-  src: url('RomanceA.ttf')
-   format("truetype") ;
-  font-weightn: normal;
-  font-style: normal;
-}
+<title>Azerty Store </title>
 
-h1 {
-  font-family:'RomanceA',sans-serif;
-  font-size: 44px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-shadow:
-    0 0 10px #00ffe7,
-    0 0 20px #00ffe7;
-}
+<style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -31,17 +15,16 @@ body {
 .bg {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: url("logo.png") center/cover no-repeat;
+  filter: blur(6px) brightness(0.3);
   z-index: -2;
-} 
+}
 
 .overlay {
   background: rgba(0,0,0,0.55);
   min-height: 100vh;
 }
- 
+
 header {
   text-align: center;
   padding: 40px 20px;
@@ -124,8 +107,10 @@ footer {
 }
 </style>
 </head>
-<video id="bgVideo" class="bg" autoplay muted playsinline>
-  <source src="bg.mp4" type="video/mp4">
+
+<body>
+
+<div class="bg"></div>
 <div class="overlay">
 
 <header>
@@ -152,9 +137,6 @@ footer {
 4.kenz galaxy<br>
 5.danzz<br>
 6.palzsukanenen<br>
-7.rid<br>
-8.GAA<br>
-9.Arzz<br>
 dst.. <br>
 Mau Ikutan?? <br>
 Masuk Aja Ke Gb, Atau Pm Ke Nomor Azertyy
@@ -168,7 +150,7 @@ Masuk Aja Ke Gb, Atau Pm Ke Nomor Azertyy
   <p id="wit">WIT: --:--:--</p>
 
   <h3>🕌 Waktu Sholat</h3>
-  <p id="sholat">Mendeteksi lokasi...</p
+  <p id="sholat">Mendeteksi lokasi...</p>
 </section>
 
 <!-- 📦 STOCK AZERTY -->
@@ -178,10 +160,7 @@ Masuk Aja Ke Gb, Atau Pm Ke Nomor Azertyy
   <!-- Stock Hari Ini -->
   <p>
     Joki Fish It (Opsional) <br>
-     Web Suntik (Foll, Like, View, Dll) <br>
-     Apk Kenon Vip <br>
-     Apk Kenon Biasa<br>
-     Stock Lain Lagi Kosong
+     Yang Lain Lagi Kosong
   </p>
 </section>
 
@@ -312,30 +291,6 @@ if ("geolocation" in navigator) {
   sholatEl.innerText="GPS tidak tersedia";
 }
 </script>
-<audio id="adzanAudio" src="adzan.mp3"></audio>
-<script>
-let adzanOn = false;
-let izinAudio = false;
-
-const audio = document.getElementById("adzanAudio");
-const btn = document.getElementById("toggleAdzan");
-
-// izin audio (1x klik biar ga diblok browser)
-document.body.addEventListener("click", () => {
-  izinAudio = true;
-}, { once:true });
-
-// tombol ON / OFF
-btn.onclick = () => {
-  adzanOn = !adzanOn;
-  btn.innerText = adzanOn ? "🔊 Adzan ON" : "🔇 Adzan OFF";
-
-  if (!adzanOn) {
-    audio.pause();
-    audio.currentTime = 0;
-  }
-};
-</script>
-
+ <audio id="adzanAudio" src="adzan.mp3" preload="auto"></audio>
 </body>
- </html>
+</html>
