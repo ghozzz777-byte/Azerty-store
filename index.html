@@ -300,12 +300,38 @@ if ("geolocation" in navigator) {
   sholatEl.innerText="GPS tidak tersedia";
 }
 </script>
- <audio id="adzanAudio" src="adzan.mp3" preload="auto"></audio>
-audio.currentTime = 0;
-audio.play().catch(()=>{});
- 
-setTimeout(() => {
-  audio.pause();
-  audio.currentTime = 0;
-}, 30000);
-/body>
+ ...
+<audio id="adzanAudio" src="adzan.mp3"></audio>
+
+<script>
+/* ======================
+   JS TOMBOL ON / OFF
+   ====================== */
+
+let adzanOn = false;
+let adzanSudahMain = false;
+let izinAudio = false;
+
+const audio = document.getElementById("adzanAudio");
+const btn = document.getElementById("toggleAdzan");
+
+// izin audio (1x tap)
+document.body.addEventListener("click", () => {
+  izinAudio = true;
+});
+
+// tombol ON / OFF
+btn.onclick = () => {
+  if (btn.disabled) return;
+  adzanOn = !adzanOn;
+  btn.innerText = adzanOn ? "🔊 Adzan ON" : "🔇 Adzan OFF";
+
+  if (!adzanOn) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+};
+</script>
+
+</body>
+</html>
