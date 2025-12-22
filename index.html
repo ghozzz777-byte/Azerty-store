@@ -169,6 +169,7 @@ Masuk Aja Ke Gb, Atau Pm Ke Nomor Azertyy
 
   <h3>🕌 Waktu Sholat</h3>
   <p id="sholat">Mendeteksi lokasi...</p>
+ <button id="toggleAdzan>🔇Adzan Off</button>
 </section>
 
 <!-- 📦 STOCK AZERTY -->
@@ -313,27 +314,20 @@ if ("geolocation" in navigator) {
 }
 </script>
 <audio id="adzanAudio" src="adzan.mp3"></audio>
-
 <script>
-/* ======================
-   JS TOMBOL ON / OFF
-   ====================== */
-
 let adzanOn = false;
-let adzanSudahMain = false;
 let izinAudio = false;
 
 const audio = document.getElementById("adzanAudio");
 const btn = document.getElementById("toggleAdzan");
 
-// izin audio (1x tap)
+// izin audio (1x klik biar ga diblok browser)
 document.body.addEventListener("click", () => {
   izinAudio = true;
-});
+}, { once:true });
 
 // tombol ON / OFF
 btn.onclick = () => {
-  if (btn.disabled) return;
   adzanOn = !adzanOn;
   btn.innerText = adzanOn ? "🔊 Adzan ON" : "🔇 Adzan OFF";
 
