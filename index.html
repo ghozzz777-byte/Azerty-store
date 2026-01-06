@@ -217,10 +217,18 @@ footer {
   </a>
 </section>
 <section class="chat">
- <p><b>Joinn Kuyy Grup JB² || ROBLOX/All Game By Azertyy 🚀</b></p>
+ <p><b>Joinn Kuyy Grup JB¹ FISH IT 🐋 || AZERTYY</b></p>
 <p style="margin-top:12px">
   <a class="btn" style="background:#00ff88"
-     href="https://chat.whatsapp.com/F1LSf0zYEc38pBhjCribUv">
+     href="https://chat.whatsapp.com/IyPHyw6i0yjJBBdYOpX4wi">
+     💬 Join Grup Chat 💬
+  </a>
+   </section>
+ <section class="chat">
+ <p><b>Joinn Kuyy Grup JB² || ROBLOX/All Game By Azertyy</b></p>
+<p style="margin-top:12px">
+  <a class="btn" style="background:#00ff88"
+     href="https://chat.whatsapp.com/CZmD2V2K8kUKRtaz0goNBQ">
      💬 Join Grup Chat 💬
   </a>
 </p>
@@ -228,7 +236,8 @@ footer {
   © 2025 Azerty Store • Built by Chatgpt+Azerty ⚡
 </footer>
 
-</div>
+
+</div
 
 <script>
 // ================= JAM =================
@@ -264,32 +273,32 @@ if ("geolocation" in navigator) {
         ];
 
         function updateSholat() {
-          const now = new Date();
-          let next = null;
-          let active = null;
+          const now = new ew Dat;
+              et n =  = n;
+              et act =  = n;
 
-          for (let s of list) {
-            let [h,m] = s[1].split(":");
-            let time = new Date();
-            time.setHours(h,m,0);
+              or ( e  s of li t
+                et,[h =  = s.1].split(";
+                et t =  =  ew Dat;
+               t.me.setHour,(,,m;
 
-            if (now < time) {
-              next = {name:s[0], time};
-              break;
-            }
+               if ( <  < ti e
+                 n =  = {n:me:s, ], ti;
+                 br;
+             
 
-            if (now >= time && now - time < 5*60*1000) {
-              active = s[0];
-              break;
-            }
-          }
+               if ( >= >= t && &&  -  - t <  * 5*60*10 0
+                 act =  = s;
+                 br;
+             
+           
 
-          if (active) {
-            sholatEl.className = "adzan";
-            sholatEl.innerText = `🕌 SUDAH WAKTUNYA SHOLAT ${active.toUpperCase()}`;
+             if (acti e
+               shola.El.classN =  = "adz;
+               shola.El.innerT =  = `🕌 SUDAH WAKTUNYA SHOLAT ${act.ve.toUpperCase(;
 
-            if (lastAdzan !== active) {
-              adzan.play().catch(()=>{});
+               if (lastAd !== == acti e
+                 ad.an.pla.().catch=>)=>;
               lastAdzan = active;
             }
             return;
