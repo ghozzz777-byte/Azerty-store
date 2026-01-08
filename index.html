@@ -176,30 +176,28 @@ footer {
 <section class="card">
   <h2>📦 STOCK AZERTY</h2>
 
-</section>
-<p>
-  Joki Fish It (Tutup) <br>
-  Web Suntik (All Sosmed) <br>
-  Apk Kenon (Vip) <br>
-  Apk Kenon (Biasa) <br><br>
-	
-  QR No KTP (Tidak Permanen) – 1k <br>
-	Qr V2<br>
-  QR No KTP (Permanen • Tanpa Admin) – 2k <br>
-  Nominal Minimal 1k (Agak Ribet) <br><br>
+  <p style="text-align:left; line-height:1.6;">
+  <b>• Joki Fish It (Tutup)</b><br>
+  <b>• Web Suntik (All Sosmed)</b><br><br>
 
-  PixelLab Pro – 2k <br>
-  • Tanpa Iklan <br>
-  • Cocok Buat Belajar Logo <br><br>
-  • Bisa Buat Logo Sendiri
-  Web Nokos – 2k <br>
-  • All Negara <br>
-  • Fresh <br><br>
+  <b>QR Pembayaran:</b><br>
+  - QR No KTP (Tidak Permanen) — 1k<br>
+  - QR No KTP (Permanent • Tanpa Admin) — 2k<br>
+  - Nominal Minimal 1k (Agak Ribet)<br><br>
 
-  Sell Nokos All Negara <br>
+  <b>PixelLab Pro — 2k</b><br>
+  - Tanpa Iklan<br>
+  - Cocok untuk Edit Logo<br><br>
+
+  <b>Web Nokos — 2k</b><br>
+  - All Negara<br>
+  - Fresh<br><br>
+
+  <b>Nokos All Negara</b><br>
   Mau Beli Nokos? PM 🚀
-</p>
-	</section>
+  </p>
+</section>
+
 <!-- 🐟 JOKI FISH IT - CLOSE -->
 <section class="card">
   <h2>🐟 JOKI FISH IT — TUTUP ❌</h2>
@@ -257,8 +255,6 @@ updateClock();
 
 // ================= SHOLAT =================
 const sholatEl = document.getElementById("sholat");
-const adzan = document.getElementById("adzanAudio");
-let lastAdzan = "";
 
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(pos => {
@@ -277,7 +273,6 @@ if ("geolocation" in navigator) {
         function updateSholat() {
           const now = new Date();
           let next = null;
-          let active = null;
 
           for (let s of list) {
             let [h,m] = s[1].split(":");
@@ -288,16 +283,6 @@ if ("geolocation" in navigator) {
               next = { name: s[0], time };
               break;
             }
-
-            if (now >= time && now - time < 5*60*1000) {
-              active = s;
-              break;
-            }
-          }
-
-          if (active) {
-            sholatEl.innerText = `🕌 SUDAH WAKTUNYA SHOLAT ${active[0].toUpperCase()}`;
-            return;
           }
 
           if (!next) {
@@ -325,4 +310,4 @@ if ("geolocation" in navigator) {
 <audio id="adzanAudio" src="adzan.mp3" preload="auto"></audio>
 
 </body>
-                     </html>
+	</html>
