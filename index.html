@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,31 +6,23 @@
 <title>Azerty Store</title>
 
 <style>
- @font-face {
-  font-family: 'RomanceA';
-  src: url('RomanceA.ttf') format('truetype');
- }
-
-h1 {
-  font-family: RomanceA, sans-serif;
-  font-size: 44px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 42px;
+  text-shadow: 0 0 12px #00ffe7;
 }
 
 .bg {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: url("logo.png") center/cover no-repeat;
+  filter: blur(6px) brightness(0.3);
   z-index: -2;
 }
 
@@ -41,7 +32,6 @@ body {
 }
 
 header {
-  text-align: center;
   padding: 40px 20px;
 }
 
@@ -54,116 +44,59 @@ header {
   margin-bottom: 15px;
 }
 
-.channel {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
-  background: #25D366;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-}
-
-.time-box, .card {
+.card {
   margin: 20px;
   padding: 15px;
   background: rgba(0,0,0,0.35);
   border-radius: 14px;
-  text-align: center;
 }
 
-.price {
-  background: rgba(0,0,0,0.4);
-  padding: 12px;
-  border-radius: 12px;
-  margin-top: 10px;
+.product-card {
+  padding: 18px;
+  margin: 16px 20px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 14px;
+  box-shadow: 0 0 8px rgba(0,255,231,0.4);
 }
 
-.price b {
+.product-card b {
   color: #00ffe7;
 }
 
 button {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 12px;
-  border: none;
   border-radius: 12px;
-  background: linear-gradient(135deg, #00ffe7, #007bff);
+  border: none;
+  background: linear-gradient(135deg,#00ffe7,#007bff);
   font-weight: bold;
 }
 
 button:disabled {
+  opacity: .5;
   background: gray;
-  opacity: 0.6;
-}
-
-.chat {
-  text-align: center;
-  margin: 30px 20px;
-}
-
-.chat a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 14px 22px;
-  background: #25D366;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 12px;
 }
 
 footer {
-  text-align: center;
   padding: 20px;
-  font-size: 14px;
-  opacity: 0.8;
+  opacity: .8;
 }
 </style>
 </head>
 
 <body>
 
-<video class="bg" autoplay muted loop playsinline>
-  <source src="bg.mp4" type="video/mp4">
-</video>
-
+<div class="bg"></div>
 <div class="overlay">
 
 <header>
   <img src="logo.png" class="logo">
   <h1>AZERTY STORE</h1>
   <p>KADANG SLOWRES • KADANG FASTRES • AMAN • NO DRAMA</p>
-
-  <a class="channel" target="_blank"
-     href="https://whatsapp.com/channel/0029VbAwpf9BlHpgOklLJj03">
-     🔔 Join WhatsApp Channel
-  </a>
 </header>
 
 <section class="card">
-  <h2>SCAMMER AZERTY</h2>
-  <p>
-    <a href="https://wa.me/6285817546084?text=ehhh%20sii%20genduttt%20Lagi%20Coli%20Ya" target="_blank">
-      Chat 6285817546084
-    </a><br>
-    <a href="https://wa.me/6285124326052?text=.menu" target="_blank">
-      Chat 6285124326052
-    </a>
-  </p>
-</section>
-
-<section class="card">
-  <p>Azerty Sudah Mendapatkan Pemenang Akun GF</p>
-  <div class="price">
-    <b>Pemenang Akun Ghostfin</b><br><br>
-    👑 AZZAM 👑<br>
-  </div>
-</section>
-
-<section class="time-box">
   <h3>⏰ Waktu Indonesia</h3>
   <p id="wib">WIB: --:--:--</p>
   <p id="wita">WITA: --:--:--</p>
@@ -175,139 +108,137 @@ footer {
 
 <section class="card">
   <h2>📦 STOCK AZERTY</h2>
-
-  <p style="text-align:left; line-height:1.6;">
-  <b>• Joki Fish It (Tutup)</b><br>
-  <b>• Web Suntik (All Sosmed)</b><br><br>
-
-  <b>QR Pembayaran:</b><br>
-  - QR No KTP (Tidak Permanen) — 1k<br>
-  - QR No KTP (Permanent • Tanpa Admin) — 2k<br>
-  - Nominal Minimal 1k (Agak Ribet)<br><br>
-
-  <b>PixelLab Pro — 2k</b><br>
-  - Tanpa Iklan<br>
-  - Cocok untuk Edit Logo<br><br>
-
-  <b>Web Nokos — 2k</b><br>
-  - All Negara<br>
-  - Fresh<br><br>
-
-  <b>Nokos All Negara</b><br>
-  Mau Beli Nokos? PM 🚀
-  </p>
 </section>
 
-<!-- 🐟 JOKI FISH IT - CLOSE -->
+<!-- QR -->
+<div class="product-card">
+  <h3>📌 APK QR </h3>
+  <p>QR No KTP (Tidak Permanen) — <b>1k</b></p>
+  <p>QR No KTP (Permanent) — <b>2k</b></p>
+  <p>Nominal Minimal 1k - Buat Qr Permanen  </p>
+</div>
+
+<!-- PIXELLAB -->
+<div class="product-card">
+  <h3>🎨 PixelLab Pro</h3>
+  <p>Harga: <b>2k</b></p>
+  <p>• Tanpa Iklan</p>
+  <p>• Cocok untuk bikin logo</p>
+</div>
+
+<!-- WEB NOKOS -->
+<div class="product-card">
+  <h3>🌍 Web Nokos</h3>
+  <p>Harga: <b>2k</b></p>
+  <p>All Negara • Fresh</p>
+</div>
+
+<!-- NOKOS ALL NEGARA -->
+<div class="product-card">
+  <h3>📱 Sell Nokos All Negara</h3>
+  <p>Mau Beli?? PM🚀</p>
+</div>
+
+<!-- JOKI -->
 <section class="card">
   <h2>🐟 JOKI FISH IT — TUTUP ❌</h2>
-  <p>Layanan joki Fish It sedang <b>ditutup sementara</b>.</p>
-
-  <div class="price">
-    <b>Layanan Tidak Tersedia</b><br><br>
-    Tidak menerima order untuk saat ini.
-  </div>
-
+  <p>Layanan joki Fish It sedang ditutup.</p>
   <button disabled>Tidak Tersedia</button>
 </section>
 
-<section class="chat">
-  <p><b>No WA Azerty</b></p>
-  <p>📱 083153940688</p>
-  <a target="_blank"
-     href="https://wa.me/6283153940688?text=Banhhh,%20Ada%20Stockk%20Apa%20Ajaaa%20Hari%20Ini,,">
-     💬 Chat Azertyy ✈️
-  </a>
-</section>
-
-<section class="chat">
-  <p><b>Join Grup JB¹ FISH IT 🐋 || AZERTYY</b></p>
-  <a class="btn" style="background:#00ff88"
-     href="https://chat.whatsapp.com/IyPHyw6i0yjJBBdYOpX4wi">💬 Join Grup Chat 💬</a>
-</section>
-
-<section class="chat">
-  <p><b>Join Grup JB² || ROBLOX/All Game By Azertyy</b></p>
-  <a class="btn" style="background:#00ff88"
-     href="https://chat.whatsapp.com/CZmD2V2K8kUKRtaz0goNBQ">💬 Join Grup Chat 💬</a>
-</section>
-
 <footer>
-  © 2025 Azerty Store • Built by ChatGPT + Azerty ⚡
+  © 2025 Azerty Store • Built by ChatGPT + Azerty
 </footer>
 
 </div>
 
-<!-- SCRIPT PERBAIKAN -->
+<!-- ===================== SCRIPT JAM + SHOLAT + ADZAN ===================== -->
+
 <script>
 // ================= JAM =================
 function updateClock() {
   const now = new Date();
-  const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+  const utc = now.getTime() + now.getTimezoneOffset()*60000;
   const fmt = t => t.toTimeString().slice(0,8);
 
-  document.getElementById("wib").innerText  = "WIB : " + fmt(new Date(utc + 7*3600000));
-  document.getElementById("wita").innerText = "WITA: " + fmt(new Date(utc + 8*3600000));
-  document.getElementById("wit").innerText  = "WIT : " + fmt(new Date(utc + 9*3600000));
+  document.getElementById("wib").innerText  ="WIB : "+fmt(new Date(utc+7*3600000));
+  document.getElementById("wita").innerText ="WITA: "+fmt(new Date(utc+8*3600000));
+  document.getElementById("wit").innerText  ="WIT : "+fmt(new Date(utc+9*3600000));
 }
 setInterval(updateClock,1000);
 updateClock();
 
-// ================= SHOLAT =================
-const sholatEl = document.getElementById("sholat");
+// ================= SHOLAT + ADZAN =================
+const sholatEl=document.getElementById("sholat");
+const adzan=document.getElementById("adzanAudio");
+let lastAdzan="";
 
-if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(pos => {
-    fetch(`https://api.aladhan.com/v1/timings?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&method=11`)
-      .then(r => r.json())
-      .then(d => {
-        const t = d.data.timings;
-        const list = [
-          ["Subuh", t.Fajr],
-          ["Dzuhur", t.Dhuhr],
-          ["Ashar", t.Asr],
-          ["Maghrib", t.Maghrib],
-          ["Isya", t.Isha]
-        ];
+if("geolocation" in navigator){
+navigator.geolocation.getCurrentPosition(pos=>{
+fetch(`https://api.aladhan.com/v1/timings?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&method=11`)
+.then(r=>r.json())
+.then(d=>{
+const t=d.data.timings;
+const list=[
+["Subuh",t.Fajr],
+["Dzuhur",t.Dhuhr],
+["Ashar",t.Asr],
+["Maghrib",t.Maghrib],
+["Isya",t.Isha]
+];
 
-        function updateSholat() {
-          const now = new Date();
-          let next = null;
+function updateSholat(){
+const now=new Date();
+let next=null;
+let active=null;
 
-          for (let s of list) {
-            let [h,m] = s[1].split(":");
-            let time = new Date();
-            time.setHours(h, m, 0);
+for(let s of list){
+let [h,m]=s[1].split(":");
+let time=new Date();
+time.setHours(h,m,0);
 
-            if (now < time) {
-              next = { name: s[0], time };
-              break;
-            }
-          }
+if(now < time){
+next={name:s[0],time};
+break;
+}
 
-          if (!next) {
-            let [h,m] = list[0][1].split(":");
-            let time = new Date();
-            time.setDate(time.getDate() + 1);
-            time.setHours(h, m, 0);
-            next = { name: "Subuh", time };
-          }
+if(now>=time && now-time <5*60*1000){
+active=s[0];
+break;
+}
+}
 
-          let diff = Math.floor((next.time - now) / 1000);
-          sholatEl.innerText =
-            `Waktu Sholat ${next.name}: ${Math.floor(diff/3600)} jam ${Math.floor(diff%3600/60)} menit lagi`;
-        }
+if(active){
+sholatEl.innerText=`🕌 SUDAH WAKTUNYA SHOLAT ${active.toUpperCase()}`;
+if(lastAdzan!==active){
+adzan.play().catch(()=>{});
+lastAdzan=active;
+}
+return;
+}
 
-        updateSholat();
-        setInterval(updateSholat, 60000);
-      });
-  },()=>sholatEl.innerText="Izin lokasi ditolak");
-} else {
-  sholatEl.innerText="GPS tidak tersedia";
+if(!next){
+let [h,m]=list[0][1].split(":");
+let time=new Date();
+time.setDate(time.getDate()+1);
+time.setHours(h,m,0);
+next={name:"Subuh",time};
+}
+
+let diff=Math.floor((next.time-now)/1000);
+sholatEl.innerText=`Waktu Sholat ${next.name}: ${Math.floor(diff/3600)} jam ${Math.floor(diff%3600/60)} menit lagi`;
+}
+
+updateSholat();
+setInterval(updateSholat,60000);
+});
+},()=>sholatEl.innerText="Izin lokasi ditolak");
+}else{
+sholatEl.innerText="GPS tidak tersedia";
 }
 </script>
 
 <audio id="adzanAudio" src="adzan.mp3" preload="auto"></audio>
 
 </body>
-	</html>
+</html>
