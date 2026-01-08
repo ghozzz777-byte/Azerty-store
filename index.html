@@ -3,19 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azerty Store</title>
+<title>Azerty Store </title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  text-align: center;
-}
-
-h1 {
-  font-size: 42px;
-  text-shadow: 0 0 12px #00ffe7;
 }
 
 .bg {
@@ -32,6 +26,7 @@ h1 {
 }
 
 header {
+  text-align: center;
   padding: 40px 20px;
 }
 
@@ -44,44 +39,82 @@ header {
   margin-bottom: 15px;
 }
 
-.card {
+.channel {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.time-box, .card {
   margin: 20px;
   padding: 15px;
   background: rgba(0,0,0,0.35);
   border-radius: 14px;
+  text-align: center;
 }
 
-.product-card {
-  padding: 18px;
-  margin: 16px 20px;
-  background: rgba(0,0,0,0.45);
-  border-radius: 14px;
-  box-shadow: 0 0 8px rgba(0,255,231,0.4);
+.card h2 {
+  margin-top: 0;
 }
 
-.product-card b {
+.price {
+  background: rgba(0,0,0,0.4);
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.price b {
   color: #00ffe7;
 }
 
 button {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 12px;
-  border-radius: 12px;
   border: none;
-  background: linear-gradient(135deg,#00ffe7,#007bff);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00ffe7, #007bff);
   font-weight: bold;
 }
 
-button:disabled {
-  opacity: .5;
-  background: gray;
+.chat {
+  text-align: center;
+  margin: 30px 20px;
+}
+
+.chat a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 14px 22px;
+  background: #25D366;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
 }
 
 footer {
+  text-align: center;
   padding: 20px;
-  opacity: .8;
+  font-size: 14px;
+  opacity: 0.8;
 }
+
+.product-card {
+  margin: 20px;
+  padding: 15px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
+  text-align: center;
+}
+.product-card h3 { margin-top: 0; }
+.product-card b { color: #00ffe7; }
 </style>
 </head>
 
@@ -94,9 +127,20 @@ footer {
   <img src="logo.png" class="logo">
   <h1>AZERTY STORE</h1>
   <p>KADANG SLOWRES • KADANG FASTRES • AMAN • NO DRAMA</p>
+
+  <a class="channel" target="_blank"
+     href="https://whatsapp.com/channel/0029VbAwpf9BlHpgOklLJj03">
+     🔔 Join WhatsApp Channel
+  </a>
 </header>
 
 <section class="card">
+ <p> Azertyy Bentar Lagi 100Mem, Kalo Udh 100mem bakal g.a lohh</p>
+  <p>"g.a apaan banh??"</p>
+ <p> G.A AKUN GHOSTFINN Tertarik gak? Kalo Tertarik Ikutan Yukk </p>
+</section>
+
+<section class="time-box">
   <h3>⏰ Waktu Indonesia</h3>
   <p id="wib">WIB: --:--:--</p>
   <p id="wita">WITA: --:--:--</p>
@@ -106,19 +150,14 @@ footer {
   <p id="sholat">Mendeteksi lokasi...</p>
 </section>
 
-<section class="card">
-  <h2>📦 STOCK AZERTY</h2>
-</section>
-
-<!-- QR -->
+<!-- STOCK BARU (MENGGANTIKAN STOCK LAMA) -->
 <div class="product-card">
-  <h3>📌 APK QR </h3>
+  <h3>📌 QR Pembayaran</h3>
   <p>QR No KTP (Tidak Permanen) — <b>1k</b></p>
   <p>QR No KTP (Permanent) — <b>2k</b></p>
-  <p>Nominal Minimal 1k - Buat Qr Permanen  </p>
+  <p>Nominal Minimal 1k</p>
 </div>
 
-<!-- PIXELLAB -->
 <div class="product-card">
   <h3>🎨 PixelLab Pro</h3>
   <p>Harga: <b>2k</b></p>
@@ -126,119 +165,147 @@ footer {
   <p>• Cocok untuk bikin logo</p>
 </div>
 
-<!-- WEB NOKOS -->
 <div class="product-card">
   <h3>🌍 Web Nokos</h3>
   <p>Harga: <b>2k</b></p>
   <p>All Negara • Fresh</p>
 </div>
 
-<!-- NOKOS ALL NEGARA -->
 <div class="product-card">
-  <h3>📱 Sell Nokos All Negara</h3>
-  <p>Mau Beli?? PM🚀</p>
+  <h3>📱 Nokos All Negara</h3>
+  <p>PM kalau mau beli 🚀</p>
 </div>
 
-<!-- JOKI -->
 <section class="card">
-  <h2>🐟 JOKI FISH IT — TUTUP ❌</h2>
-  <p>Layanan joki Fish It sedang ditutup.</p>
-  <button disabled>Tidak Tersedia</button>
+  <h2>🐟 JOKI FISH IT</h2>
+  <p>Akun Aman, Joki Aman, Semua Aman 101%</p>
+
+  <div class="price">
+    <b>LIST HARGA</b><br><br>
+    1 Hari = <b>6k</b><br>
+    7 Hari = <b>25k</b><br><br>
+    Mau 2H 3H 4H 5H 6H?<br>
+    <b>PM AJA 🔥</b>
+  </div>
+
+  <button onclick="window.open('https://wa.me/6283153940688?text=Wouyyy%20Azerty,%20mau%20joki%20donggg')">
+    Order Sekarang
+  </button>
 </section>
 
+<section class="chat">
+  <p><b>No WA Azerty</b></p>
+  <p>📱 083153940688</p>
+  <a target="_blank"
+     href="https://wa.me/6283153940688?text=Banhhh,%20Ada%20Stockk%20Apa%20Ajaaa%20Hari%20Ini,,">
+     💬 Chat Azertyy ✈️
+  </a>
+</section>
+
+<section class="chat">
+ <p><b>Joinn Kuyy Grup JB || All Game By Azertyy 🚀</b></p>
+<p style="margin-top:12px">
+  <a class="btn" style="background:#00ff88"
+     href="https://chat.whatsapp.com/ETGurxd41ea6lpC9FD8mrm">
+     💬 Join Grup Chat 💬
+  </a>
+</p>
+
 <footer>
-  © 2025 Azerty Store • Built by ChatGPT + Azerty
+  © 2025 Azerty Store • Built by Chatgpt+Azerty ⚡
 </footer>
 
 </div>
-
-<!-- ===================== SCRIPT JAM + SHOLAT + ADZAN ===================== -->
 
 <script>
 // ================= JAM =================
 function updateClock() {
   const now = new Date();
-  const utc = now.getTime() + now.getTimezoneOffset()*60000;
+  const utc = now.getTime() + now.getTimezoneOffset() * 60000;
   const fmt = t => t.toTimeString().slice(0,8);
 
-  document.getElementById("wib").innerText  ="WIB : "+fmt(new Date(utc+7*3600000));
-  document.getElementById("wita").innerText ="WITA: "+fmt(new Date(utc+8*3600000));
-  document.getElementById("wit").innerText  ="WIT : "+fmt(new Date(utc+9*3600000));
+  document.getElementById("wib").innerText  = "WIB : " + fmt(new Date(utc + 7*3600000));
+  document.getElementById("wita").innerText = "WITA: " + fmt(new Date(utc + 8*3600000));
+  document.getElementById("wit").innerText  = "WIT : " + fmt(new Date(utc + 9*3600000));
 }
 setInterval(updateClock,1000);
 updateClock();
 
 // ================= SHOLAT + ADZAN =================
-const sholatEl=document.getElementById("sholat");
-const adzan=document.getElementById("adzanAudio");
-let lastAdzan="";
+const sholatEl = document.getElementById("sholat");
+const adzan = document.getElementById("adzanAudio");
+let lastAdzan = "";
 
-if("geolocation" in navigator){
-navigator.geolocation.getCurrentPosition(pos=>{
-fetch(`https://api.aladhan.com/v1/timings?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&method=11`)
-.then(r=>r.json())
-.then(d=>{
-const t=d.data.timings;
-const list=[
-["Subuh",t.Fajr],
-["Dzuhur",t.Dhuhr],
-["Ashar",t.Asr],
-["Maghrib",t.Maghrib],
-["Isya",t.Isha]
-];
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(pos => {
+    fetch(`https://api.aladhan.com/v1/timings?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&method=11`)
+      .then(r => r.json())
+      .then(d => {
+        const t = d.data.timings;
+        const list = [
+          ["Subuh", t.Fajr],
+          ["Dzuhur", t.Dhuhr],
+          ["Ashar", t.Asr],
+          ["Maghrib", t.Maghrib],
+          ["Isya", t.Isha]
+        ];
 
-function updateSholat(){
-const now=new Date();
-let next=null;
-let active=null;
+        function updateSholat() {
+          const now = new Date();
+          let next = null;
+          let active = null;
 
-for(let s of list){
-let [h,m]=s[1].split(":");
-let time=new Date();
-time.setHours(h,m,0);
+          for (let s of list) {
+            let [h,m] = s[1].split(":");
+            let time = new Date();
+            time.setHours(h,m,0);
 
-if(now < time){
-next={name:s[0],time};
-break;
-}
+            if (now < time) {
+              next = {name:s[0], time};
+              break;
+            }
 
-if(now>=time && now-time <5*60*1000){
-active=s[0];
-break;
-}
-}
+            if (now >= time && now - time < 5*60*1000) {
+              active = s[0];
+              break;
+            }
+          }
 
-if(active){
-sholatEl.innerText=`🕌 SUDAH WAKTUNYA SHOLAT ${active.toUpperCase()}`;
-if(lastAdzan!==active){
-adzan.play().catch(()=>{});
-lastAdzan=active;
-}
-return;
-}
+          if (active) {
+            sholatEl.className = "adzan";
+            sholatEl.innerText = `🕌 SUDAH WAKTUNYA SHOLAT ${active.toUpperCase()}`;
 
-if(!next){
-let [h,m]=list[0][1].split(":");
-let time=new Date();
-time.setDate(time.getDate()+1);
-time.setHours(h,m,0);
-next={name:"Subuh",time};
-}
+            if (lastAdzan !== active) {
+              adzan.play().catch(()=>{});
+              lastAdzan = active;
+            }
+            return;
+          }
 
-let diff=Math.floor((next.time-now)/1000);
-sholatEl.innerText=`Waktu Sholat ${next.name}: ${Math.floor(diff/3600)} jam ${Math.floor(diff%3600/60)} menit lagi`;
-}
+          sholatEl.className = "";
 
-updateSholat();
-setInterval(updateSholat,60000);
-});
-},()=>sholatEl.innerText="Izin lokasi ditolak");
-}else{
-sholatEl.innerText="GPS tidak tersedia";
+          if (!next) {
+            let [h,m]=list[0][1].split(":");
+            let time=new Date();
+            time.setDate(time.getDate()+1);
+            time.setHours(h,m,0);
+            next={name:"Subuh",time};
+          }
+
+          let diff=Math.floor((next.time-now)/1000);
+          sholatEl.innerText =
+            `Waktu Sholat ${next.name}: ${Math.floor(diff/3600)} jam ${Math.floor(diff%3600/60)} menit lagi`;
+        }
+
+        updateSholat();
+        setInterval(updateSholat,60000);
+      });
+  },()=>sholatEl.innerText="Izin lokasi ditolak");
+} else {
+  sholatEl.innerText="GPS tidak tersedia";
 }
 </script>
 
 <audio id="adzanAudio" src="adzan.mp3" preload="auto"></audio>
-
 </body>
-</html>
+  </html>
